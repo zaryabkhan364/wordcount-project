@@ -1,6 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 import operator
+import json
+
+def portfolio(request):
+    return HttpResponse('<h1>I love programming.</h1>')
 
 def homepage(request):
     return render(request, 'home.html')
@@ -24,4 +28,6 @@ def count(request):
 
     return render(request, 'count.html', {'fulltext':fulltext, 'count':len(word_list), 'sorted_words':sorted_words})
 
-   
+
+def count1(request):
+    return render(request, 'count1.html')
